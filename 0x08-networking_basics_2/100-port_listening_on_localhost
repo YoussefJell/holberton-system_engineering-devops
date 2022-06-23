@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# opens listener on port 98
 nc -l 98

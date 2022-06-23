@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# shows attached ipv4 of current machine
 ifconfig | grep "inet " | cut -d" " -f10
