@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that installs nginx and redirects to youtube page
+new_conf="server {\n\trewrite ^/redirect_me/$ https://www.youtube.com/watch?v=X_8Nh5XfRw0 permanent;\new_conf}"
+sudo apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sed -i "s/listen 80 default_server;/${new_conf}/g" /etc/nginx/sites-enabled/default
+service nginx start
