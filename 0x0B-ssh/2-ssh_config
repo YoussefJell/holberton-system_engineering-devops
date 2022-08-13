@@ -3,3 +3,6 @@
 Host 98.98.98.98
 	IdentityFile ~/.ssh/school
 	BatchMode yes
+	User ubuntu
+	Port 22
+
