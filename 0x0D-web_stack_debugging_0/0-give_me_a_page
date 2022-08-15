@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # Restars the apach2 service using sudo
 sudo service apache2 restart
-
