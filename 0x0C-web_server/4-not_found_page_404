@@ -2,6 +2,7 @@
 # Bash script that installs nginx and redirects to youtube page, and the 404 says something else
 new_conf="server_name\ _;\n\trewrite ^/redirect_me/$ https://www.youtube.com/watch?v=X_8Nh5XfRw0 permanent;"
 new_error="server_name\ _;\n\terror_page 404 /my_404.html;\nlocation = /my_404.html {\n\troot /var/www/html/;\n\tinternal;\n}"
+sudo apt-get update -y
 sudo apt-get install nginx -y
 sudo chmod 777 /var/www/html/index.nginx-debian.html
 echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
