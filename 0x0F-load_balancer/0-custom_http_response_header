@@ -11,6 +11,6 @@ sudo touch /var/www/html/my_404.html
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html > /dev/null
 sudo sed -i "s@server_name\ _;@${new_conf}@g" /etc/nginx/sites-enabled/default
 sudo sed -i "s@server_name\ _;@${new_error}@g" /etc/nginx/sites-enabled/default
-sudo sed -i "s@http {@${new_header}@g" /etc/nginx/nginx.conf
+sudo sed -i "s@server_name\ _;@${new_header}@g" /etc/nginx/sites-enabled/default
 sudo chmod 644 /var/www/html/index.nginx-debian.html
 sudo service nginx start
