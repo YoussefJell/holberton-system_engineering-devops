@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # fixing nginx
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enaled/default
-sudo service nginx restart
-sudo rm /run/nginx.pid
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
