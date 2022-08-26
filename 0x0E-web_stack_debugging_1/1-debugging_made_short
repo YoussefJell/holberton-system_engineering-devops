@@ -2,3 +2,4 @@
 # fixing nginx
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx start
+sudo rm /run/nginx.pid
