@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this will execute the "whoami" cmd as the user specified in the argument
+sudo su $1 -s /bin/bash -c 'whoami'
