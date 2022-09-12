@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0-gather_data_from_an_API module"""
+"""2-export_to_JSON module"""
 from json import dumps
 import requests
 from sys import argv
