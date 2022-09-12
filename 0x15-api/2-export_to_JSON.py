@@ -13,7 +13,7 @@ employeeID = int(argv[1])
 endpoint = "https://jsonplaceholder.typicode.com"
 user = requests.get("{}/users/{}".format(endpoint, employeeID)).json()
 todo = requests.get("{}/users/{}/todos".format(endpoint, employeeID)).json()
-employeeName = user.get('name')
+employeeName = user.get('username')
 
 row = []
 

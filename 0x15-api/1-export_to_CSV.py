@@ -14,7 +14,7 @@ employeeID = int(argv[1])
 endpoint = "https://jsonplaceholder.typicode.com"
 user = requests.get("{}/users/{}".format(endpoint, employeeID)).json()
 todo = requests.get("{}/users/{}/todos".format(endpoint, employeeID)).json()
-employeeName = user.get('name')
+employeeName = user.get('username')
 
 with open('{}.csv'.format(employeeID), 'w', encoding="utf-8") as file:
     writer = csv.writer(file, delimiter=',', quoting=csv.QUOTE_ALL)

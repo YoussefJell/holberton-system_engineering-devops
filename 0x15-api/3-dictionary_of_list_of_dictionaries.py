@@ -8,7 +8,7 @@ users = requests.get("{}/users".format(endpoint)).json()
 users_count = len(users)
 with open('todo_all_employees.json', 'w', encoding="utf-8") as file:
     for i in range(1, users_count):
-        employeeName = users[i].get('name')
+        employeeName = users[i].get('username')
         todo = requests.get(
             "{}/users/{}/todos".format(endpoint, i)).json()
         row = []
