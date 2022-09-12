@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0-gather_data_from_an_API module"""
+"""3-dictionary_of_list_of_dictionaries module"""
 from json import dumps
 import requests
 
