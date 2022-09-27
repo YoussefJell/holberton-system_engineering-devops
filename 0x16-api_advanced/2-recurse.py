@@ -9,7 +9,7 @@ def recurse(subreddit, hot_list=[], after=''):
     if not subreddit:
         return None
     url = "https://www.reddit.com"
-    endpoint = f"/r/{subreddit}/hot.json?after={after}"
+    endpoint = f"/r/{subreddit}/hot.json?limit=100&after={after}"
 
     request = requests.get(f"{url}{endpoint}",
                            headers={'User-agent': 'Mozilla/5.0'},
