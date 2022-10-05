@@ -57,8 +57,7 @@ server {
         }
         rewrite ^/redirect_me/$ https://www.youtube.com/watch?v=X_8Nh5XfRw0 permanent;
         location /airbnb-onepage/ {
-                root ~/holbertonschool-AirBnB_clone_v2/;
-                proxy_pass http://127.0.0.1:5000;
+                proxy_pass http://0.0.0.0:5000;
         }
         location / {
                 # First attempt to serve request as file, then
